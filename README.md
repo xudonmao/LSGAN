@@ -35,6 +35,7 @@ If you use this work in your research, please cite:
     
  
 ### Results
+Honestly, the images shown in the paper are cherry-picked. But the following results are not.
 #### Church
  ![result](images/church_supplementary.png)
 #### Bedroom
