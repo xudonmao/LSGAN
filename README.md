@@ -1,7 +1,6 @@
 # LSGAN
-Tested on Nvidia K80
 ### Prerequisites
-- [Tensorflow r0.11](https://www.tensorflow.org/versions/r0.11/get_started/os_setup)
+- [Tensorflow r0.12](https://www.tensorflow.org/versions/r0.12/get_started/os_setup)
 - SciPy
 
 ### Usage
@@ -27,7 +26,7 @@ Tested on Nvidia K80
 If you use this work in your research, please cite:
 
     @article{arxiv1611.04076,
-      author = {Xudong Mao, Qing Li, Haoran Xie, Raymond Y.K. Lau and Zhen Wang},
+      author = {Xudong Mao, Qing Li, Haoran Xie, Raymond Y.K. Lau and Zhen Wang and Stephen Paul Smolley},
       title = {Least Squares Generative Adversarial Networks},
       journal = {arXiv preprint arXiv:1611.04076},
       year = {2016}
@@ -35,7 +34,6 @@ If you use this work in your research, please cite:
     
  
 ### Results
-Honestly, the images shown in the paper are cherry-picked. But the following results are not.
 #### Church
  ![result](images/church_supplementary.png)
 #### Bedroom

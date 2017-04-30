@@ -1,5 +1,7 @@
 # Stability Comparison
 
-Here we present two comparisons, BN_G with Adam and BN_GD with RMSProp (Table 2 in arxiv:1611.04076). The other two can be done by modifying the Optimizer in dcgan64.py.
+BN_G: without Batch Normalization in Generator. 
 
-Tested on Nvidia K80.
+BN_GD: without Batch Normalization in both Generator and Discriminator.
+
+mixture_gaussian: test stability on the mixture Gaussian distribution.
