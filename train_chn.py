@@ -6,6 +6,7 @@ import tensorflow as tf
 import mcgan
 import os
 import icdar
+import pdb
 
 from utils import *
 
@@ -52,11 +53,11 @@ def train():
 
     sampler = mcgan.sampler(random_z, label_y)
 
-    summary_op = tf.merge_all_summaries()
+    #summary_op = tf.merge_all_summaries()
 
     sess = sess_init()
 
-    summary_writer = tf.train.SummaryWriter(FLAGS.log_dir, sess.graph)
+    #summary_writer = tf.train.SummaryWriter(FLAGS.log_dir, sess.graph)
 
     data_set = icdar.ICDAR(FLAGS.data_dir)
     data_set.load(FLAGS.y_dim)
@@ -84,15 +85,13 @@ def train():
         save_images(samples, [8, 8],
             './samples/train_{:d}.bmp'.format(step))
         save_images(batch_images, [8, 8],
-            './samples_real/train_{:d}.bmp'.format(step))
+          './samples_real/train_{:d}.bmp'.format(step))
                             
-      if step % 1000 == 0:
-        summary_str = sess.run(summary_op, 
-            feed_dict={images: batch_images, random_z: batch_z, label_y: batch_labels})
-        summary_writer.add_summary(summary_str, step)
+        #if step % 1000 == 0:
+        #  summary_str = sess.run(summary_op, 
+        #      feed_dict={images: batch_images, random_z: batch_z, label_y: batch_labels})
+        #  summary_writer.add_summary(summary_str, step)
 
-      if step % 10000 == 0:
-        saver.save(sess, '{0}/mcgan-{1}.model'.format(FLAGS.checkpoint_dir, step), global_step)
 
 def main(argv=None):
   os.system('mkdir -p samples')

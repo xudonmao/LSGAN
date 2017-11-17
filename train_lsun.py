@@ -21,7 +21,7 @@ tf.app.flags.DEFINE_integer('output_size', '112', """output size""")
 tf.app.flags.DEFINE_integer('max_steps', 1000000, """Number of batches to run.""")
 tf.app.flags.DEFINE_string('log_dir', './log/', """Directory where to write event logs """)
 tf.app.flags.DEFINE_string('checkpoint_dir', './checkpoint/', """Directory where to write the checkpoint""")
-tf.app.flags.DEFINE_string('data_path', '../church112.tfrecords', """Path to the lsun data file""")
+tf.app.flags.DEFINE_string('data_path', './church112.tfrecords', """Path to the lsun data file""")
 
 
 def sess_init():
@@ -56,13 +56,13 @@ def train():
 
     sampler = vgg.sampler(random_z)
 
-    summary_op = tf.merge_all_summaries()
+    #summary_op = tf.merge_all_summaries()
 
     sess = sess_init()
 
     tf.train.start_queue_runners(sess=sess)
 
-    summary_writer = tf.train.SummaryWriter(FLAGS.log_dir, sess.graph)
+    #summary_writer = tf.train.SummaryWriter(FLAGS.log_dir, sess.graph)
     
     saver = tf.train.Saver()
 

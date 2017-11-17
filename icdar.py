@@ -6,6 +6,7 @@ from six.moves import xrange  # pylint: disable=redefined-builtin
 import random
 import tensorflow as tf
 import scipy.misc
+import pdb
 import os
 import cv2
 import struct as st
@@ -28,10 +29,10 @@ class ICDAR():
       X = np.load(self.char_set[i])
       if i == 0:
         trX = X
-        trY = np.ones(X.shape[0]).astype(np.float) * i
+        trY = np.ones(X.shape[0], dtype='int32') * i
       else:
         trX = np.concatenate([trX, X])
-        trY = np.concatenate([trY, np.ones(X.shape[0]).astype(np.float) * i])
+        trY = np.concatenate([trY, np.ones(X.shape[0], dtype='int32') * i])
     X = trX
     y = trY
     seed = 547
