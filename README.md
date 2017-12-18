@@ -26,7 +26,7 @@
 If you use this work in your research, please cite:
 
     @article{arxiv1611.04076,
-      author = {Xudong Mao, Qing Li, Haoran Xie, Raymond Y.K. Lau and Zhen Wang and Stephen Paul Smolley},
+      author = {Xudong Mao and Qing Li and Haoran Xie and Raymond Y.K. Lau and Zhen Wang and Stephen Paul Smolley},
       title = {Least Squares Generative Adversarial Networks},
       journal = {arXiv preprint arXiv:1611.04076},
       year = {2016}
