@@ -1,4 +1,7 @@
 # LSGAN
+Code for [Least Squares Generative Adversarial Networks](http://openaccess.thecvf.com/content_iccv_2017/html/Mao_Least_Squares_Generative_ICCV_2017_paper.html) and [On the Effectiveness of Least Squares Generative Adversarial Networks](https://arxiv.org/abs/1712.06391).
+
+Related project: [improved_LSGAN](https://github.com/xudonmao/improved_LSGAN)
 ### Prerequisites
 - Tensorflow
 - SciPy
